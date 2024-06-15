@@ -1,5 +1,5 @@
-import greeting from '../src/greeting.js';
+import greeting from './greeting.js';
 
-export default function () {
-    greeting();
+export default function BrainGames() {
+  greeting();
 }
