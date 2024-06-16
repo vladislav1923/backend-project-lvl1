@@ -15,19 +15,12 @@ class EvenGame extends BaseGame {
     Utils.validate(answer, expectedAnswer);
   }
 
-  quiz() {
-    Utils.print('Answer "yes" if the number is even, otherwise answer "no".');
-    try {
-      Utils.repeat(this.question.bind(this));
-      Utils.print(`Congratulations, ${this.name}!`);
-    } catch {
-      Utils.print(`Let's try again, ${this.name}!`);
-    }
-  }
-
   start() {
     this.greeting();
-    this.quiz();
+    this.quiz(
+        'Answer "yes" if the number is even, otherwise answer "no".',
+        this.question.bind(this),
+    );
   }
 }
 

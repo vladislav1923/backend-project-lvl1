@@ -4,58 +4,50 @@ import Utils from '../utils/utils.js';
 class CalcGame extends BaseGame {
   operators = ['+', '-', '*'];
 
-  generateExpression() {
+  expression() {
     const firstOperand = Utils.random(10);
     const secondOperand = Utils.random(10);
     const operator = this.operators[Utils.random(this.operators.length) - 1];
-    let expectedAnswer = 0;
-    let question = '';
 
     switch (operator) {
+      default:
       case '+':
-        expectedAnswer = firstOperand + secondOperand;
-        question = `${firstOperand} + ${secondOperand}`;
-        break;
+        return {
+          answer: firstOperand + secondOperand,
+          question: `${firstOperand} + ${secondOperand}`
+        }
       case '-':
         if (firstOperand > secondOperand) {
-          expectedAnswer = firstOperand - secondOperand;
-          question = `${firstOperand} - ${secondOperand}`;
-        } else {
-          expectedAnswer = secondOperand - firstOperand;
-          question = `${secondOperand} - ${firstOperand}`;
+          return {
+            answer: firstOperand - secondOperand,
+            question: `${firstOperand} - ${secondOperand}`
+          }
         }
-        break;
+        return {
+          answer: secondOperand - firstOperand,
+          question: `${secondOperand} - ${firstOperand}`
+        }
       case '*':
-        expectedAnswer = firstOperand * secondOperand;
-        question = `${firstOperand} * ${secondOperand}`;
-        break;
-      default:
-        break;
+        return {
+          answer: secondOperand * firstOperand,
+          question: `${secondOperand} * ${firstOperand}`
+        }
     }
-
-    return { question, expectedAnswer };
   }
 
   question() {
-    const expression = this.generateExpression();
+    const expression = this.expression();
     const answer = Utils.question(`Question: ${expression.question} \n`);
     Utils.print(`Your answer: ${answer}`);
-    Utils.validate(Number(answer), expression.expectedAnswer);
-  }
-
-  quiz() {
-    Utils.print('What is the result of the expression?');
-    try {
-      Utils.repeat(this.question.bind(this));
-      Utils.print(`Congratulations, ${this.name}!`);
-    } catch {
-      Utils.print(`Let's try again, ${this.name}!`);
-    }
+    Utils.validate(Number(answer), expression.answer);
   }
 
   start() {
     this.greeting();
-    this.quiz();
+    this.quiz(
+        'What is the result of the expression?',
+        this.question.bind(this),
+    );
   }
 }
 
