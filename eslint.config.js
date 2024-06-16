@@ -51,6 +51,7 @@ export default [
       'import/no-named-as-default-member': 'off',
       'no-console': 'off',
       'import/no-extraneous-dependencies': 'off',
+      'class-methods-use-this': 'off',
     },
   },
 ];

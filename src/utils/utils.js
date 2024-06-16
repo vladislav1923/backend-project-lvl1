@@ -28,6 +28,14 @@ class Utils {
   static question(text) {
     return readlineSync.question(text);
   }
+
+  static gcd(a, b) {
+    if (!b) {
+      return a;
+    }
+
+    return Utils.gcd(b, a % b);
+  }
 }
 
 export default Utils;
