@@ -36,6 +36,18 @@ class Utils {
 
     return Utils.gcd(b, a % b);
   }
+
+  static progression(first, step, length) {
+    const result = [first];
+    let current = first;
+
+    for (let i = 0; i < length - 1; i += 1) {
+      current += step;
+      result.push(current);
+    }
+
+    return result;
+  }
 }
 
 export default Utils;
