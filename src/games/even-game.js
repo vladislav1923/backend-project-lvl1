@@ -18,8 +18,8 @@ class EvenGame extends BaseGame {
   start() {
     this.greeting();
     this.quiz(
-        'Answer "yes" if the number is even, otherwise answer "no".',
-        this.question.bind(this),
+      'Answer "yes" if the number is even, otherwise answer "no".',
+      this.question.bind(this),
     );
   }
 }

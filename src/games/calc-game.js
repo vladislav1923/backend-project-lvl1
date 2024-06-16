@@ -10,28 +10,27 @@ class CalcGame extends BaseGame {
     const operator = this.operators[Utils.random(this.operators.length) - 1];
 
     switch (operator) {
-      default:
       case '+':
         return {
           answer: firstOperand + secondOperand,
-          question: `${firstOperand} + ${secondOperand}`
-        }
+          question: `${firstOperand} + ${secondOperand}`,
+        };
       case '-':
         if (firstOperand > secondOperand) {
           return {
             answer: firstOperand - secondOperand,
-            question: `${firstOperand} - ${secondOperand}`
-          }
+            question: `${firstOperand} - ${secondOperand}`,
+          };
         }
         return {
           answer: secondOperand - firstOperand,
-          question: `${secondOperand} - ${firstOperand}`
-        }
-      case '*':
+          question: `${secondOperand} - ${firstOperand}`,
+        };
+      default:
         return {
           answer: secondOperand * firstOperand,
-          question: `${secondOperand} * ${firstOperand}`
-        }
+          question: `${secondOperand} * ${firstOperand}`,
+        };
     }
   }
 
@@ -45,8 +44,8 @@ class CalcGame extends BaseGame {
   start() {
     this.greeting();
     this.quiz(
-        'What is the result of the expression?',
-        this.question.bind(this),
+      'What is the result of the expression?',
+      this.question.bind(this),
     );
   }
 }
