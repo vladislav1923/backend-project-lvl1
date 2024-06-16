@@ -43,10 +43,8 @@ class CalcGame extends BaseGame {
 
   start() {
     this.greeting();
-    this.quiz(
-      'What is the result of the expression?',
-      this.question.bind(this),
-    );
+    this.title = 'What is the result of the expression?';
+    this.quiz();
   }
 }
 

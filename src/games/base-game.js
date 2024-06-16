@@ -3,6 +3,8 @@ import Utils from '../utils/utils.js';
 class BaseGame {
   name;
 
+  title;
+
   greeting() {
     Utils.print('Welcome to the Brain Games!');
     this.name = Utils.question('May I have your name?\n');
@@ -13,10 +15,15 @@ class BaseGame {
     this.greeting();
   }
 
-  quiz(title, question) {
-    Utils.print(title);
+  /* eslint-disable-next-line class-methods-use-this */
+  question() {
+    /* will be overridden */
+  }
+
+  quiz() {
+    Utils.print(this.title);
     try {
-      Utils.repeat(question);
+      Utils.repeat(this.question.bind(this));
       Utils.print(`Congratulations, ${this.name}!`);
     } catch (e) {
       if (e.message) {
