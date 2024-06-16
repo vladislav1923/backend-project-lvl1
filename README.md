@@ -15,3 +15,12 @@
 
 ### GCD Game
 [![asciicast](https://asciinema.org/a/TJ23POd8Gq0mJSEcoi0J60HRC.svg)](https://asciinema.org/a/TJ23POd8Gq0mJSEcoi0J60HRC)
+
+### Adding a new game
+1. Add a file with game's logic to `src/games/`
+2. Re-export it from `src/index.js`
+3. Add an executable file of the game to `bin/` (first line is `#!/usr/bin/env node`)
+4. Add a game's start command to `bin` block in `package.json`
+5. Execute a command `chmod +x bin/GAME_EXE_FILE_NAME`
+6. Publish the lib launching `make publish`
+7. Link the lib locally launching `make link`
