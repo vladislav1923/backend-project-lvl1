@@ -8,7 +8,7 @@
 [![asciicast](https://asciinema.org/a/MUmYKzcnaSgsjOMN6wezWIW46.svg)](https://asciinema.org/a/MUmYKzcnaSgsjOMN6wezWIW46)
 
 ### Even Game
-[![asciicast](https://asciinema.org/a/qyOqyM5NyhxyEFTNpopAdk5GN.svg)](https://asciinema.org/a/qyOqyM5NyhxyEFTNpopAdk5GN)
+[![asciicast](https://asciinema.org/a/3pFvfqqQcOo37buM8seApHrGc.svg)](https://asciinema.org/a/3pFvfqqQcOo37buM8seApHrGc)
 
 ### Calc Game
-[![asciicast](https://asciinema.org/a/WQZ7MBArSiiSASTYVC4jzu8io.svg)](https://asciinema.org/a/WQZ7MBArSiiSASTYVC4jzu8io)
+[![asciicast](https://asciinema.org/a/ZggGgV45FBl2AsOzSyJd4ssN9.svg)](https://asciinema.org/a/ZggGgV45FBl2AsOzSyJd4ssN9)
