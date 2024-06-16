@@ -1,4 +1,4 @@
-import BaseGame from "./base-game.js";
+import BaseGame from './base-game.js';
 
 class ProgressionGame extends BaseGame {
 

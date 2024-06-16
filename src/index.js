@@ -5,5 +5,5 @@ import GcdGame from './games/gcd-game.js';
 import ProgressionGame from './games/progression-game.js';
 
 export {
-  BaseGame, EvenGame, CalcGame, GcdGame, ProgressionGame
+  BaseGame, EvenGame, CalcGame, GcdGame, ProgressionGame,
 };
