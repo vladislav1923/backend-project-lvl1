@@ -33,20 +33,29 @@ class CalcGame extends BaseGame {
         break;
     }
 
-    const answer = Utils.question(`Question: ${question} \n`);
-    Utils.print(`Your answer: ${answer}`);
-    Utils.validate(Number(answer), expectedAnswer);
+    return { question, expectedAnswer };
   }
 
-  start() {
-    this.greeting();
+  question() {
+    const expression = this.generateExpression();
+    const answer = Utils.question(`Question: ${expression.question} \n`);
+    Utils.print(`Your answer: ${answer}`);
+    Utils.validate(Number(answer), expression.expectedAnswer);
+  }
+
+  quiz() {
     Utils.print('What is the result of the expression?');
     try {
-      Utils.conductSurvey(this.generateExpression.bind(this));
+      Utils.repeat(this.question.bind(this));
       Utils.print(`Congratulations, ${this.name}!`);
     } catch {
       Utils.print(`Let's try again, ${this.name}!`);
     }
+  }
+
+  start() {
+    this.greeting();
+    this.quiz();
   }
 }
 

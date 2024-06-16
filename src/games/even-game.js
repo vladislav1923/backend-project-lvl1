@@ -7,7 +7,7 @@ class EvenGame extends BaseGame {
     negative: 'no',
   };
 
-  generateQuestion() {
+  question() {
     const num = Utils.random();
     const expectedAnswer = num % 2 === 0 ? this.answers.positive : this.answers.negative;
     const answer = Utils.question(`Question: ${num} \n`);
@@ -15,15 +15,19 @@ class EvenGame extends BaseGame {
     Utils.validate(answer, expectedAnswer);
   }
 
-  start() {
-    this.greeting();
+  quiz() {
     Utils.print('Answer "yes" if the number is even, otherwise answer "no".');
     try {
-      Utils.conductSurvey(this.generateQuestion.bind(this));
+      Utils.repeat(this.question.bind(this));
       Utils.print(`Congratulations, ${this.name}!`);
     } catch {
       Utils.print(`Let's try again, ${this.name}!`);
     }
+  }
+
+  start() {
+    this.greeting();
+    this.quiz();
   }
 }
 

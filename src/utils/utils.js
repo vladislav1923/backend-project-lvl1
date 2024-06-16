@@ -13,7 +13,7 @@ class Utils {
     }
   }
 
-  static conductSurvey(fn, num = 3) {
+  static repeat(fn, num = 3) {
     let i = 0;
     while (i < num) {
       fn();
