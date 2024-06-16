@@ -16,15 +16,11 @@ class CalcGame extends BaseGame {
           question: `${firstOperand} + ${secondOperand}`,
         };
       case '-':
-        if (firstOperand > secondOperand) {
-          return {
-            answer: firstOperand - secondOperand,
-            question: `${firstOperand} - ${secondOperand}`,
-          };
-        }
         return {
-          answer: secondOperand - firstOperand,
-          question: `${secondOperand} - ${firstOperand}`,
+          answer: firstOperand > secondOperand
+              ? firstOperand - secondOperand : secondOperand - firstOperand,
+          question: firstOperand > secondOperand
+              ? `${firstOperand} - ${secondOperand}` : `${secondOperand} - ${firstOperand}`,
         };
       default:
         return {
