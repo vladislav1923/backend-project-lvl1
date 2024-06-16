@@ -22,7 +22,7 @@ class Utils {
   }
 
   static print(text) {
-    console.log(text + '\n');
+    console.log(`${text}\n`);
   }
 
   static question(text) {
