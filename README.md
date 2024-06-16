@@ -19,6 +19,9 @@
 ### Progression Game
 [![asciicast](https://asciinema.org/a/q0AB1xZaENteiUdOaj9bJwkgV.svg)](https://asciinema.org/a/q0AB1xZaENteiUdOaj9bJwkgV)
 
+### Prime Game
+[![asciicast](https://asciinema.org/a/H2v7qGSSueAXH0AGzFmMpySyz.svg)](https://asciinema.org/a/H2v7qGSSueAXH0AGzFmMpySyz)
+
 ### Adding a new game
 1. Add a file with game's logic to `src/games/`
 2. Re-export it from `src/index.js`

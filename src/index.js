@@ -3,7 +3,8 @@ import EvenGame from './games/even-game.js';
 import CalcGame from './games/calc-game.js';
 import GcdGame from './games/gcd-game.js';
 import ProgressionGame from './games/progression-game.js';
+import PrimeGame from './games/prime-game.js';
 
 export {
-  BaseGame, EvenGame, CalcGame, GcdGame, ProgressionGame,
+  BaseGame, EvenGame, CalcGame, GcdGame, ProgressionGame, PrimeGame,
 };

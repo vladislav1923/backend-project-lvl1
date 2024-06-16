@@ -1,7 +1,7 @@
 import BaseGame from './base-game.js';
 import Utils from '../utils/utils.js';
 
-class EvenGame extends BaseGame {
+class PrimeGame extends BaseGame {
   answers = {
     positive: 'yes',
     negative: 'no',
@@ -11,7 +11,7 @@ class EvenGame extends BaseGame {
     const num = Utils.random();
     return {
       question: num,
-      answer: num % 2 === 0 ? this.answers.positive : this.answers.negative,
+      answer: Utils.isPrime(num) ? this.answers.positive : this.answers.negative,
     };
   }
 
@@ -28,9 +28,9 @@ class EvenGame extends BaseGame {
 
   start() {
     this.greeting();
-    this.title = 'Answer "yes" if the number is even, otherwise answer "no".';
+    this.title = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     this.quiz();
   }
 }
 
-export default EvenGame;
+export default PrimeGame;
