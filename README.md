@@ -7,8 +7,5 @@
 ### Installation
 [![asciicast](https://asciinema.org/a/MUmYKzcnaSgsjOMN6wezWIW46.svg)](https://asciinema.org/a/MUmYKzcnaSgsjOMN6wezWIW46)
 
-### Won Game Example
-[![asciicast](https://asciinema.org/a/V3YVSgCUwJWQs6YLBhVlQzwNC.svg)](https://asciinema.org/a/V3YVSgCUwJWQs6YLBhVlQzwNC)
-
-### Lost Game Example
-[![asciicast](https://asciinema.org/a/XtQPbpMbj5A8J9w8tII4lucwp.svg)](https://asciinema.org/a/XtQPbpMbj5A8J9w8tII4lucwp)
+### Even Game
+[![asciicast](https://asciinema.org/a/qyOqyM5NyhxyEFTNpopAdk5GN.svg)](https://asciinema.org/a/qyOqyM5NyhxyEFTNpopAdk5GN)
