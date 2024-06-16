@@ -15,6 +15,7 @@ class BaseGame {
     this.greeting();
   }
 
+  /* eslint-disable-next-line class-methods-use-this */
   expression() {
     /* will be overridden */
   }

@@ -2,6 +2,7 @@ import BaseGame from './base-game.js';
 import Utils from '../utils/utils.js';
 
 class GcdGame extends BaseGame {
+  /* eslint-disable-next-line class-methods-use-this */
   expression() {
     const firstNum = Utils.random();
     const secondNum = Utils.random();
