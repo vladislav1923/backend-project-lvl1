@@ -1,3 +1,5 @@
+import readlineSync from 'readline-sync';
+
 class Utils {
   static random(max = 100) {
     return Math.floor(Math.random() * max) + 1;
@@ -5,7 +7,7 @@ class Utils {
 
   static validate(answer, correct) {
     if (correct === answer) {
-      console.log('Correct!');
+      Utils.print('Correct!');
     } else {
       throw new Error();
     }
@@ -17,6 +19,14 @@ class Utils {
       fn();
       i += 1;
     }
+  }
+
+  static print(text) {
+    console.log(text);
+  }
+
+  static question(text) {
+    return readlineSync.question(text);
   }
 }
 

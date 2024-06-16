@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import BaseGame from './base-game.js';
 import Utils from '../utils/utils.js';
 
@@ -11,19 +10,19 @@ class EvenGame extends BaseGame {
   generateQuestion() {
     const num = Utils.random();
     const expectedAnswer = num % 2 === 0 ? this.answers.positive : this.answers.negative;
-    const answer = readlineSync.question(`Question: ${num} \n`);
-    console.log(`Your answer: ${answer}`);
+    const answer = Utils.question(`Question: ${num} \n`);
+    Utils.print(`Your answer: ${answer}`);
     Utils.validate(answer, expectedAnswer);
   }
 
   start() {
     this.greeting();
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    Utils.print('Answer "yes" if the number is even, otherwise answer "no".');
     try {
       Utils.conductSurvey(this.generateQuestion.bind(this));
-      console.log(`Congratulations, ${this.name}!`);
+      Utils.print(`Congratulations, ${this.name}!`);
     } catch {
-      console.log(`Let's try again, ${this.name}!`);
+      Utils.print(`Let's try again, ${this.name}!`);
     }
   }
 }

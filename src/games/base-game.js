@@ -1,12 +1,12 @@
-import readlineSync from 'readline-sync';
+import Utils from '../utils/utils.js';
 
 class BaseGame {
   name;
 
   greeting() {
-    console.log('Welcome to the Brain Games!');
-    this.name = readlineSync.question('May I have your name?\n');
-    console.log(`Hello ${this.name}!`);
+    Utils.print('Welcome to the Brain Games!');
+    this.name = Utils.question('May I have your name?\n');
+    Utils.print(`Hello ${this.name}!`);
   }
 
   start() {

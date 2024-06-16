@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import BaseGame from './base-game.js';
 import Utils from '../utils/utils.js';
 
@@ -34,19 +33,19 @@ class CalcGame extends BaseGame {
         break;
     }
 
-    const answer = readlineSync.question(`Question: ${question} \n`);
-    console.log(`Your answer: ${answer}`);
+    const answer = Utils.question(`Question: ${question} \n`);
+    Utils.print(`Your answer: ${answer}`);
     Utils.validate(Number(answer), expectedAnswer);
   }
 
   start() {
     this.greeting();
-    console.log('What is the result of the expression?');
+    Utils.print('What is the result of the expression?');
     try {
       Utils.conductSurvey(this.generateExpression.bind(this));
-      console.log(`Congratulations, ${this.name}!`);
+      Utils.print(`Congratulations, ${this.name}!`);
     } catch {
-      console.log(`Let's try again, ${this.name}!`);
+      Utils.print(`Let's try again, ${this.name}!`);
     }
   }
 }
