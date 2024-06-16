@@ -35,9 +35,9 @@ class CalcGame extends BaseGame {
     const answer = Utils.question(`Question: ${expression.question} \n`);
     Utils.print(`Your answer: ${answer}`);
     Utils.validate(
-        Number(answer),
-        expression.answer,
-        `'${answer}' is wrong answer ;(. Correct answer was '${expression.answer}'.`
+      Number(answer),
+      expression.answer,
+      `'${answer}' is wrong answer ;(. Correct answer was '${expression.answer}'.`,
     );
   }
 

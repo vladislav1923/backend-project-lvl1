@@ -13,9 +13,9 @@ class EvenGame extends BaseGame {
     const answer = Utils.question(`Question: ${num} \n`);
     Utils.print(`Your answer: ${answer}`);
     Utils.validate(
-        answer,
-        expectedAnswer,
-        `'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`
+      answer,
+      expectedAnswer,
+      `'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`,
     );
   }
 
