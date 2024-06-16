@@ -8,7 +8,7 @@ class BaseGame {
   greeting() {
     Utils.print('Welcome to the Brain Games!');
     this.name = Utils.question('May I have your name?\n');
-    Utils.print(`Hello ${this.name}!`);
+    Utils.print(`Hello, ${this.name}!`);
   }
 
   start() {
