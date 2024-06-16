@@ -7,19 +7,8 @@ class GcdGame extends BaseGame {
     const secondNum = Utils.random();
     return {
       question: `${firstNum} ${secondNum}`,
-      answer: Utils.gcd(firstNum, secondNum),
+      answer: String(Utils.gcd(firstNum, secondNum)),
     };
-  }
-
-  question() {
-    const expression = this.expression();
-    const answer = Utils.question(`Question: ${expression.question} \n`);
-    Utils.print(`Your answer: ${answer}`);
-    Utils.validate(
-      Number(answer),
-      expression.answer,
-      `'${answer}' is wrong answer ;(. Correct answer was '${expression.answer}'.`,
-    );
   }
 
   start() {

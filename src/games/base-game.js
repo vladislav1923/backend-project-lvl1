@@ -15,8 +15,19 @@ class BaseGame {
     this.greeting();
   }
 
-  question() {
+  expression() {
     /* will be overridden */
+  }
+
+  question() {
+    const expression = this.expression();
+    const answer = Utils.question(`Question: ${expression.question} \n`);
+    Utils.print(`Your answer: ${answer}`);
+    Utils.validate(
+      answer,
+      expression.answer,
+      `'${answer}' is wrong answer ;(. Correct answer was '${expression.answer}'.`,
+    );
   }
 
   quiz() {

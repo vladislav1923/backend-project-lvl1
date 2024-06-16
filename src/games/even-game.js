@@ -15,17 +15,6 @@ class EvenGame extends BaseGame {
     };
   }
 
-  question() {
-    const expression = this.expression();
-    const answer = Utils.question(`Question: ${expression.question} \n`);
-    Utils.print(`Your answer: ${answer}`);
-    Utils.validate(
-      answer,
-      expression.answer,
-      `'${answer}' is wrong answer ;(. Correct answer was '${expression.answer}'.`,
-    );
-  }
-
   start() {
     this.greeting();
     this.title = 'Answer "yes" if the number is even, otherwise answer "no".';

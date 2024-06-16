@@ -12,33 +12,22 @@ class CalcGame extends BaseGame {
     switch (operator) {
       case '+':
         return {
-          answer: firstOperand + secondOperand,
+          answer: String(firstOperand + secondOperand),
           question: `${firstOperand} + ${secondOperand}`,
         };
       case '-':
         return {
-          answer: firstOperand > secondOperand
-            ? firstOperand - secondOperand : secondOperand - firstOperand,
+          answer: String(firstOperand > secondOperand
+            ? firstOperand - secondOperand : secondOperand - firstOperand),
           question: firstOperand > secondOperand
             ? `${firstOperand} - ${secondOperand}` : `${secondOperand} - ${firstOperand}`,
         };
       default:
         return {
-          answer: secondOperand * firstOperand,
+          answer: String(secondOperand * firstOperand),
           question: `${secondOperand} * ${firstOperand}`,
         };
     }
-  }
-
-  question() {
-    const expression = this.expression();
-    const answer = Utils.question(`Question: ${expression.question} \n`);
-    Utils.print(`Your answer: ${answer}`);
-    Utils.validate(
-      Number(answer),
-      expression.answer,
-      `'${answer}' is wrong answer ;(. Correct answer was '${expression.answer}'.`,
-    );
   }
 
   start() {
