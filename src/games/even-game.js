@@ -12,7 +12,11 @@ class EvenGame extends BaseGame {
     const expectedAnswer = num % 2 === 0 ? this.answers.positive : this.answers.negative;
     const answer = Utils.question(`Question: ${num} \n`);
     Utils.print(`Your answer: ${answer}`);
-    Utils.validate(answer, expectedAnswer);
+    Utils.validate(
+        answer,
+        expectedAnswer,
+        `'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`
+    );
   }
 
   start() {

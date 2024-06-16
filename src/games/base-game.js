@@ -18,7 +18,8 @@ class BaseGame {
     try {
       Utils.repeat(question);
       Utils.print(`Congratulations, ${this.name}!`);
-    } catch {
+    } catch (e) {
+      e.message && Utils.print(e.message);
       Utils.print(`Let's try again, ${this.name}!`);
     }
   }

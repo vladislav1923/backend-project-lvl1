@@ -5,11 +5,11 @@ class Utils {
     return Math.floor(Math.random() * max) + 1;
   }
 
-  static validate(answer, correct) {
+  static validate(answer, correct, errorMessage) {
     if (correct === answer) {
       Utils.print('Correct!');
     } else {
-      throw new Error();
+      throw new Error(errorMessage);
     }
   }
 
