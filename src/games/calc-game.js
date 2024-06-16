@@ -18,9 +18,9 @@ class CalcGame extends BaseGame {
       case '-':
         return {
           answer: firstOperand > secondOperand
-              ? firstOperand - secondOperand : secondOperand - firstOperand,
+            ? firstOperand - secondOperand : secondOperand - firstOperand,
           question: firstOperand > secondOperand
-              ? `${firstOperand} - ${secondOperand}` : `${secondOperand} - ${firstOperand}`,
+            ? `${firstOperand} - ${secondOperand}` : `${secondOperand} - ${firstOperand}`,
         };
       default:
         return {
