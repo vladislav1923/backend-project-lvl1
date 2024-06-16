@@ -9,3 +9,6 @@
 
 ### Even Game
 [![asciicast](https://asciinema.org/a/qyOqyM5NyhxyEFTNpopAdk5GN.svg)](https://asciinema.org/a/qyOqyM5NyhxyEFTNpopAdk5GN)
+
+### Calc Game
+[![asciicast](https://asciinema.org/a/WQZ7MBArSiiSASTYVC4jzu8io.svg)](https://asciinema.org/a/WQZ7MBArSiiSASTYVC4jzu8io)
